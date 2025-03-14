@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer with Soundscapes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        
+        <div class="timer-display">
+            <span id="timer">25:00</span>
+            <div class="session-type" id="sessionType">Focus</div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div class="settings">
+            <h2>Settings</h2>
+            <div class="time-settings">
+                <div>
+                    <label>Focus (min):</label>
+                    <input type="number" id="focusTime" min="1" max="60" value="25">
+                </div>
+                <div>
+                    <label>Short Break (min):</label>
+                    <input type="number" id="shortBreak" min="1" max="30" value="5">
+                </div>
+                <div>
+                    <label>Long Break (min):</label>
+                    <input type="number" id="longBreak" min="1" max="60" value="15">
+                </div>
+            </div>
+
+            <div class="soundscapes">
+                <h3>Soundscapes</h3>
+                <select id="soundSelect">
+                    <option value="none">None</option>
+                    <option value="rain">Rain</option>
+                    <option value="forest">Forest</option>
+                    <option value="ocean">Ocean</option>
+                    <option value="coffee">Coffee Shop</option>
+                </select>
+                <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+
+        <div class="stats">
+            <h2>Productivity Stats</h2>
+            <div id="statsDisplay">
+                <p>Completed Sessions: <span id="completedSessions">0</span></p>
+                <p>Total Focus Time: <span id="totalFocusTime">0</span> min</p>
+                <p>Current Streak: <span id="streak">0</span> days</p>
+            </div>
+            <button id="exportBtn">Export Stats</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

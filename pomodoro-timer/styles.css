@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --bg-color: #f5f6fa;
+    --text-color: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.timer-display {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#timer {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.session-type {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: var(--secondary-color);
+}
+
+.settings, .stats {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.time-settings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.time-settings div {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 0.3rem;
+}
+
+.soundscapes {
+    margin-top: 1rem;
+}
+
+select, input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.stats p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    #timer {
+        font-size: 2.5rem;
+    }
+}
