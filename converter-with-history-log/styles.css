@@ -1,0 +1,117 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f3f3f3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    width: 360px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    padding: 10px;
+    background: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#modeSelect {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.display {
+    padding: 20px;
+}
+
+#inputValue, #resultValue {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+#resultValue {
+    background: #f9f9f9;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.history {
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.history-header {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.history-item {
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.history-item span {
+    color: #666;
+    font-size: 12px;
+}
+
+.clear-btn {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.clear-btn:hover {
+    background: #e0e0e0;
+}
