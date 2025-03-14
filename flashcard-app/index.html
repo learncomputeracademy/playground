@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flashcard Pro</h1>
+            <div class="stats">
+                <span>Total: <span id="total-cards">0</span></span>
+                <span>Due: <span id="due-cards">0</span></span>
+            </div>
+        </header>
+
+        <div class="create-section">
+            <div class="input-group">
+                <input type="text" id="front" placeholder="Question/Front">
+                <input type="text" id="back" placeholder="Answer/Back">
+                <button id="add-card">Add Card</button>
+            </div>
+        </div>
+
+        <div class="cards-section">
+            <h2>Your Cards</h2>
+            <div class="cards-list" id="cards-list">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+            <div class="review-controls" id="review-controls" style="display: none;">
+                <button class="review-btn" data-difficulty="1">Hard</button>
+                <button class="review-btn" data-difficulty="2">Medium</button>
+                <button class="review-btn" data-difficulty="4">Easy</button>
+            </div>
+        </div>
+
+        <div class="explanation-section">
+            <h3>How Reviews Work</h3>
+            <p><span class="hard-text">Hard</span>: Review tomorrow (struggled).</p>
+            <p><span class="medium-text">Medium</span>: Review soon (some effort).</p>
+            <p><span class="easy-text">Easy</span>: Review later (knew it well).</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
