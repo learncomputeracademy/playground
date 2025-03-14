@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pixel Art Studio</h1>
+        
+        <div class="control-panel">
+            <select id="gridSize" class="custom-select">
+                <option value="16">16×16</option>
+                <option value="32">32×32</option>
+                <option value="64">64×64</option>
+            </select>
+
+            <input type="color" id="colorPicker" value="#000000" class="color-input">
+            
+            <button id="fillTool" class="tool-button">Fill</button>
+            <button id="eraseTool" class="tool-button">Erase</button>
+            <button id="clearBtn" class="tool-button danger">Clear</button>
+            <button id="exportPNG" class="export-button">Export PNG</button>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="pixelCanvas" class="pixel-canvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
