@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f 0%, #2a2a3d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.game-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* Replace the existing select, button styling with this */
+select, button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-appearance: none; /* Remove default arrow in some browsers */
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+}
+
+/* Add these new rules */
+select {
+    padding-right: 30px; /* Make room for custom arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select option {
+    background: #2a2a3d; /* Dark background for options */
+    color: #fff; /* White text for options */
+}
+
+select:hover, button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: 320px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cell.x {
+    color: #00ffcc;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.cell.o {
+    color: #ff3366;
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+.status {
+    text-align: center;
+    color: #fff;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.winning-cell {
+    animation: pulse 1s infinite;
+    background: rgba(255, 255, 255, 0.2);
+}
